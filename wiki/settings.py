@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'markdown_deux',
     'encyclopedia',
     'django.contrib.admin',
     'django.contrib.auth',
