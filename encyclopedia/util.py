@@ -21,7 +21,7 @@ def save_entry(title, content):
     """
     filename = f"entries/{title}.md"
     if default_storage.exists(filename):
-        default_storage.delete(filename)
+        delete_entry(title)
     default_storage.save(filename, ContentFile(content))
 
 
@@ -36,3 +36,6 @@ def get_entry(title):
     except FileNotFoundError:
         return None
 
+def delete_page(title):
+    filename = f"entries/{title}.md"
+    default_storage.delete(filename)

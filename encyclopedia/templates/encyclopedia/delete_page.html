@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>Delete Page</h1>
+    <form action="{% url 'delete_page' title=title %}" method="POST">
+        {% csrf_token %}
+        Please confirm that you want to delete <strong>{{title}}</strong>.<br>                
+        <input type="submit">
+    </form>
+{% endblock %}

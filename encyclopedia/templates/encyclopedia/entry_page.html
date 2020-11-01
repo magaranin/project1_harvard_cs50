@@ -5,11 +5,13 @@
 {% endblock %}
 
 {% block body %}
-    <h1>{{title}}</h1>
     {% if content %}
         <h5>{{content|safe}}</h5>
+
+        <a class="edit" href='{{title}}/edit_page'>Edit Page</a><br>
+        <a class="delete" href='{{title}}/delete_page'>Delete Page</a>
     {% else %}
         <h1>404 error</h1><br>
         <h5>Sorry, your requested page was not found!</h5>
-    {% endif %}    
+    {% endif %}  
 {% endblock %}
